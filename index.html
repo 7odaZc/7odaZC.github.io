@@ -17,22 +17,32 @@
   <div class="floating-dots"></div>
 
   <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">ME</div>
-    <!-- Sidebar Menu -->
-    <ul class="nav-menu">
-      <li><a href="#home" onclick="document.getElementById('nav-toggle').checked = false;">Home</a></li>
-      <li><a href="#about" onclick="document.getElementById('nav-toggle').checked = false;">About</a></li>
-      <li><a href="#education" onclick="document.getElementById('nav-toggle').checked = false;">Education</a></li>
-      <li><a href="#skills" onclick="document.getElementById('nav-toggle').checked = false;">Skills</a></li>
-      <li><a href="#experience" onclick="document.getElementById('nav-toggle').checked = false;">Experience</a></li>
-      <li><a href="#portfolio" onclick="document.getElementById('nav-toggle').checked = false;">Portfolio</a></li>
-      <li><a href="#contact" onclick="document.getElementById('nav-toggle').checked = false;">Contact</a></li>
-    </ul>
+<nav class="navbar">
+  <div class="logo">ME</div>
+  
+  <!-- Mobile Menu Toggle -->
+  <div class="mobile-menu-toggle">
+    <label for="nav-toggle" class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </label>
+  </div>
 
-    <!-- Resume Button (Desktop) -->
-    <a href="CV.pdf" download class="btn-resume">Resume</a>
-  </nav>
+  <!-- Desktop Menu -->
+  <ul class="nav-menu">
+    <li><a href="#home" onclick="document.getElementById('nav-toggle').checked = false;">Home</a></li>
+    <li><a href="#about" onclick="document.getElementById('nav-toggle').checked = false;">About</a></li>
+    <li><a href="#education" onclick="document.getElementById('nav-toggle').checked = false;">Education</a></li>
+    <li><a href="#skills" onclick="document.getElementById('nav-toggle').checked = false;">Skills</a></li>
+    <li><a href="#experience" onclick="document.getElementById('nav-toggle').checked = false;">Experience</a></li>
+    <li><a href="#portfolio" onclick="document.getElementById('nav-toggle').checked = false;">Portfolio</a></li>
+    <li><a href="#contact" onclick="document.getElementById('nav-toggle').checked = false;">Contact</a></li>
+  </ul>
+
+  <!-- Resume Button (Desktop) -->
+  <a href="CV.pdf" download class="btn-resume">Resume</a>
+</nav>
 
   <!-- Home Section -->
   <section id="home" class="section">

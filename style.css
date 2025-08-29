@@ -152,13 +152,162 @@ body {
   color: #38BDF8;
 }
 /* Navbar Links */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  max-width: none;
+  margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #38BDF8;
+}
+
+/* Mobile menu toggle styles */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #CBD5E1;
+  transition: all 0.3s ease;
+}
+
+/* Desktop navigation */
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
 .navbar a {
   color: #CBD5E1;
   text-decoration: none;
   font-size: 0.95rem;
-  padding: 8px 12px; /* Larger tap area for mobile */
+  padding: 8px 12px;
   border-radius: 6px;
   transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: #38BDF8;
+  background-color: rgba(56, 189, 248, 0.1);
+}
+
+.btn-resume {
+  background: rgba(56, 189, 248, 0.2);
+  color: white;
+  border: 1px solid #38BDF8;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive styles - Mobile First */
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+    margin-right: 1rem;
+  }
+  
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+    padding: 1rem 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    gap: 0;
+  }
+  
+  .navbar ul.active {
+    display: flex;
+  }
+  
+  .navbar a {
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .btn-resume {
+    display: none;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  /* Fix section spacing */
+  .section {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+  
+  /* Ensure proper spacing */
+  .content-container {
+    padding: 30px;
+  }
+  
+  /* Adjust profile picture */
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+  
+  /* Adjust social links */
+  .social-links {
+    gap: 20px;
+  }
+  
+  .social-links img {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .navbar a:hover,
