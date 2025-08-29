@@ -869,31 +869,40 @@ h1, h2 {
     height: 36px;
   }
 }
-/* Hamburger Menu - Mobile Only */
+
+  /* Hamburger Icon */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #38BDF8;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Show Hamburger on Mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
   }
 
-  .hamburger span {
-    width: 28px;
-    height: 3px;
-    background: #38BDF8;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-  }
-
-  /* Hide normal navbar on mobile */
+  /* Hide Desktop Nav */
   .navbar ul {
-    display: none; /* Hide desktop links */
+    display: none;
   }
 
   /* Sidebar Menu */
   .nav-menu {
-    /* ... existing styles ... */
     position: fixed;
     top: 0;
     right: -300px;
@@ -911,7 +920,6 @@ h1, h2 {
     z-index: 100;
     list-style: none;
     margin: 0;
-    transform: none;
   }
 
   .nav-menu a {
@@ -952,8 +960,27 @@ h1, h2 {
     right: 0;
   }
 
-  /* Hide Resume Button on Mobile */
+  /* Hide Resume Button on Desktop */
   .btn-resume {
     display: none;
+  }
+
+  /* Mobile Resume Button */
+  .btn-resume-mobile {
+    background: rgba(56, 189, 248, 0.2);
+    color: white;
+    border: 1px solid #38BDF8;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+  }
+
+  .btn-resume-mobile:hover {
+    background: rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
   }
 }
