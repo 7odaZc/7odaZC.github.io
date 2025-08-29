@@ -30,13 +30,13 @@
 
     <!-- Navigation Links (Sidebar) -->
     <ul class="nav-menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home" onclick="document.getElementById('nav-toggle').checked = false;">Home</a></li>
+      <li><a href="#about" onclick="document.getElementById('nav-toggle').checked = false;">About</a></li>
+      <li><a href="#education" onclick="document.getElementById('nav-toggle').checked = false;">Education</a></li>
+      <li><a href="#skills" onclick="document.getElementById('nav-toggle').checked = false;">Skills</a></li>
+      <li><a href="#experience" onclick="document.getElementById('nav-toggle').checked = false;">Experience</a></li>
+      <li><a href="#portfolio" onclick="document.getElementById('nav-toggle').checked = false;">Portfolio</a></li>
+      <li><a href="#contact" onclick="document.getElementById('nav-toggle').checked = false;">Contact</a></li>
     </ul>
 
     <a href="CV.pdf" download class="btn-resume">Resume</a>
@@ -315,6 +315,15 @@
         setTimeout(() => cat1.classList.add('fade-in'), 100);
         setTimeout(() => cat2.classList.add('fade-in'), 500);
         setTimeout(() => cat3.classList.add('fade-in'), 900);
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+        navToggle.checked = false;
       }
     });
   </script>

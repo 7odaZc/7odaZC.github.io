@@ -893,6 +893,7 @@ h1, h2 {
 
   /* Sidebar Menu */
   .nav-menu {
+    /* ... existing styles ... */
     position: fixed;
     top: 0;
     right: -300px;
