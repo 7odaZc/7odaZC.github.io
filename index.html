@@ -20,15 +20,17 @@
   <nav class="navbar">
     <div class="logo">ME</div>
 
-    <!-- Hamburger Toggle -->
+    <!-- Hidden Checkbox -->
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+    <!-- Hamburger Icon -->
     <label for="nav-toggle" class="hamburger">
       <span></span>
       <span></span>
       <span></span>
     </label>
 
-    <!-- Navigation Links (Sidebar) -->
+    <!-- Sidebar Menu -->
     <ul class="nav-menu">
       <li><a href="#home" onclick="document.getElementById('nav-toggle').checked = false;">Home</a></li>
       <li><a href="#about" onclick="document.getElementById('nav-toggle').checked = false;">About</a></li>
@@ -40,7 +42,7 @@
       <li><a href="CV.pdf" download onclick="document.getElementById('nav-toggle').checked = false;" class="btn-resume-mobile">Resume</a></li>
     </ul>
 
-    <!-- Resume Button (Desktop Only) -->
+    <!-- Resume Button (Desktop) -->
     <a href="CV.pdf" download class="btn-resume">Resume</a>
   </nav>
 
