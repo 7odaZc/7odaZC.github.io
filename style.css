@@ -10,7 +10,8 @@ body {
   font-family: 'Inter', sans-serif;
   color: #F8FAFC;
   overflow-x: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   position: relative;
 }
 
@@ -150,6 +151,21 @@ body {
   font-size: 1.5rem;
   color: #38BDF8;
 }
+/* Navbar Links */
+.navbar a {
+  color: #CBD5E1;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 8px 12px; /* Larger tap area for mobile */
+  border-radius: 6px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: #38BDF8;
+  background-color: rgba(56, 189, 248, 0.1);
+}
 
 .navbar ul {
   display: flex;
@@ -188,10 +204,11 @@ body {
 /* Sections */
 .section {
   min-height: 100vh;
+  padding: 4rem 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
   position: relative;
   z-index: 5;
 }
@@ -769,54 +786,9 @@ h1, h2 {
 }
 /* Responsive Design - Mobile First */
 @media (max-width: 768px) {
-  /* Reduce padding on sections */
-  .section {
-    padding: 60px 15px;
-  }
-
-  /* Center content on mobile */
-  .content-container, 
-  .skills-content, 
-  .portfolio-content, 
-  .about-content,
-  .education-content,
-  .contact-content {
-    padding: 20px;
-    margin: 0 10px;
-  }
-
-  /* Skills: Stack cards vertically */
-  .skills-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .skill-category {
-    min-width: 100%;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  /* Projects: Stack project cards */
-  .projects-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-card {
-    flex-direction: column;
-    max-width: 100%;
-  }
-
-  .project-image img {
-    height: 180px;
-  }
-
-  /* About Section: Stack text and image */
   .about-content {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
 
   .about-text {
@@ -829,21 +801,35 @@ h1, h2 {
   }
 
   .about-image img {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
   }
 
-  /* Education: Center logo */
   .edu-card {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 20px;
   }
 
   .edu-logo img {
     width: 100px;
   }
 
-  /* Navbar: Make it scrollable if needed */
+  .skills-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* ✅ Add this rule here */
+  .section {
+    padding: 3rem 1.5rem;
+    justify-content: start;
+    min-height: auto;
+    padding-top: 100px; /* Space for fixed navbar */
+  }
+
+  /* Keep the rest of your rules below */
   .navbar ul {
     gap: 1rem;
     font-size: 0.9rem;
@@ -854,7 +840,6 @@ h1, h2 {
     font-size: 0.8rem;
   }
 
-  /* Headings: Adjust size for small screens */
   h1 {
     font-size: 2.5rem;
   }
@@ -867,13 +852,11 @@ h1, h2 {
     font-size: 1.1rem;
   }
 
-  /* Profile Picture: Slightly smaller */
   .profile-pic {
     width: 180px;
     height: 180px;
   }
 
-  /* Social Icons: Smaller gap */
   .social-links {
     gap: 20px;
   }
@@ -881,30 +864,5 @@ h1, h2 {
   .social-links img {
     width: 36px;
     height: 36px;
-  }
-}
-/* Tablet Responsive */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .skills-grid, .projects-grid {
-    gap: 20px;
-  }
-
-  .skill-category, .project-card {
-    min-width: 220px;
-    flex: 1 1 45%;
-  }
-
-  .about-content, .edu-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 2.8rem;
-  }
-
-  .profile-pic {
-    width: 200px;
-    height: 200px;
   }
 }
