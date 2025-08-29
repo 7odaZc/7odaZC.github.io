@@ -235,8 +235,8 @@ body {
 
 /* Profile Photo */
 .profile-pic {
-  width: 220px;
-  height: 220px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
   margin: 20px auto;
@@ -252,14 +252,14 @@ body {
 /* Typography */
 h1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
   color: #F8FAFC;
   text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
 }
 
 .subtitle {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 20px;
   color: #60A5FA;
   font-weight: normal;
@@ -268,7 +268,7 @@ h1 {
 .bio {
   margin: 15px 0;
   line-height: 1.8;
-  font-size: 1.05rem;
+  font-size: 1rem; /* Increased from 1.05rem */
   color: #CBD5E1;
 }
 
@@ -296,7 +296,7 @@ h1 {
 /* About Section */
 .about-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -306,7 +306,8 @@ h1 {
   border: 1px solid rgba(56, 189, 248, 0.2);
   backdrop-filter: blur(12px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    opacity: 0;
+  flex-wrap: wrap;
+  opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease forwards;
   animation-delay: 0.3s;
@@ -331,7 +332,9 @@ h1 {
 
 .about-text {
   flex: 1;
+  min-width: 200px;
   padding-right: 40px;
+  text-align: left;
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.8s ease;
@@ -826,7 +829,7 @@ h1, h2 {
     padding: 3rem 1.5rem;
     justify-content: start;
     min-height: auto;
-    padding-top: 100px; /* Space for fixed navbar */
+    padding: 60px 15px;/* Space for fixed navbar */
   }
 
   /* Keep the rest of your rules below */
@@ -864,5 +867,29 @@ h1, h2 {
   .social-links img {
     width: 36px;
     height: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-text {
+    padding-right: 0;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
   }
 }
